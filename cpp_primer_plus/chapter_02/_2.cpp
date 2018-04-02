@@ -3,12 +3,12 @@ using namespace std;
 
 int main()
 {
-	cout << "input a distance(long): " << endl;
-	int distance;
-	cin >> distance;
-	cout << "the distance is " << distance << 
-	" long, and the same as " << 
-	distance / 220 << " yard.";
+	int ilong;
+	int iyard;
+	cout << "input a distance in long: " << endl;
+	cin >> ilong;
+	iyard = 220 * ilong;
+	cout << "the distance in yards is " << iyard << endl;
 	
 	return 0;
 }

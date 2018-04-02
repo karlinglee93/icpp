@@ -3,10 +3,14 @@ using namespace std;
 
 int main()
 {
-	cout << "Enter your age: " << endl;
 	int age;
+	int months;
+	cout << "Enter your age: " << endl;
 	cin >> age;
-	cout << "your age contains " << age * 12 << " month!";
+
+	months = 12 * age;
+	cout << "your age contains " << months << 
+	" months!" << endl;
 
 	return 0;
 }

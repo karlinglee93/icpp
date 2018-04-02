@@ -4,14 +4,16 @@ double _6_transform(double);
 
 int main()
 {
-	double input;
+	double light_years;
+	double astronomical;
+
 	cout << "Enter the number of light years: " <<endl;
-	cin >> input;
+	cin >> light_years;
 	
-	double output = _6_transform(input);
+	astronomical = _6_transform(light_years);
 	
-	cout << input << " light years = " 
-	<< output << " astronomical units. ";
-	
+	cout << light_years << " light years = " 
+	<< astronomical << " astronomical units. " << endl;
+
 	return 0;
 }

@@ -16,9 +16,11 @@ int main()
 void function_1()
 {
 	cout << "Three blind mice" << endl;
+	return;
 }
 
 void function_2()
 {
 	cout << "See how they run" << endl;
+	return;
 }
