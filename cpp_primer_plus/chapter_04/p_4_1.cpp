@@ -11,9 +11,9 @@ int main(int argc, const char * argv[])
     int age;
     
     cout << "What is your first name? ";
-    cin >> first_name;
+    cin.getline(first_name, 128);                      // cin cin.get() cin.getline() 的区别
     cout << "What is your last name? ";
-    cin >> last_name;
+    cin.getline(last_name, 128);
     cout << "What letter grade do you deserve? ";
     cin >> letter;
     cout << "What is your age? ";
@@ -25,4 +25,3 @@ int main(int argc, const char * argv[])
     
     return 0;
 }
-

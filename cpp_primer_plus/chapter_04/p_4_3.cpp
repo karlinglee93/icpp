@@ -10,12 +10,11 @@ int main(int argc, const char * argv[])
     char last_name[128];
     
     cout << "Enter your first name: ";
-    cin >> first_name;
+    cin.getline(first_name, 128);
     cout << "Enter your last name: ";
-    cin >> last_name;
+    cin.getline(last_name, 128);
     
     cout << "Here's the information in a single string: " << strcat(strcat(last_name, ", "), first_name) << endl;
     
     return 0;
 }
-

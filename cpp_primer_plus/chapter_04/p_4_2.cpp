@@ -1,5 +1,5 @@
 #include <iostream>
-#include <string>
+//#include <string>
 
 using namespace std;
 
@@ -12,9 +12,9 @@ int main(int argc, const char * argv[])
     int age;
     
     cout << "What is your first name? ";
-    cin >> first_name;
+    getline(cin, first_name);                      //getline() 和cin.getline() 的区别
     cout << "What is your last name? ";
-    cin >> last_name;
+    getline(cin, last_name);
     cout << "What letter grade do you deserve? ";
     cin >> letter;
     cout << "What is your age? ";

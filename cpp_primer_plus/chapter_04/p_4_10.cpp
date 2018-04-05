@@ -1,27 +1,22 @@
 #include <iostream>
+#include <array>
 
 using namespace std;
 
 int main()
 {
-	double * grades = new double[3];
-	double sum = 0.0;
-	int len = 0;
-	double ave = 0.0;
-
-	for(int i=0; i<3; i++)
-	{
-		cout << "the time: ";
-		cin >> grades[i];
-
-		sum += grades[i];
-		len ++;
-	}
-
-	ave = sum / len;
-
-	cout << "the times are " << len << endl;
-	cout << "the average is " << ave << endl;
-
-	return 0;
+    array<double, 3> grades;
+    double ave = 0.0;
+    
+    cout << "input your three times grades: " << endl;
+    cin >> grades[0];
+    cin >> grades[1];
+    cin >> grades[2];
+    
+    ave = (grades[0] + grades[1] + grades[2]) / 3;
+    
+    cout << "grades are: " << grades[0] << ", " << grades[1] << ", " << grades[2] << endl;
+    cout << "average is: " << ave << endl;
+    
+    return 0;
 }

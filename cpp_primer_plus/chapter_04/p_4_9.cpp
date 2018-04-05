@@ -1,4 +1,5 @@
 #include <iostream>
+#include <string>
 
 using namespace std;
 
@@ -16,11 +17,13 @@ int main()
 	for(int i=0; i<3; i++)
 	{
 		cout << "input brand ";
-		cin >> candybar[i].brand;
-		cout << "input weight ";
+        getline(cin, candybar[i].brand);
+        cout << "input weight ";
 		cin >> candybar[i].weight;
 		cout << "input calorie ";
 		cin >> candybar[i].calorie;
+        
+        cin.get();
 	}
 
 	for(int i=0; i<3; i++)
