@@ -9,12 +9,9 @@ int main()
     double Cleo = init_money;
     int years = 0;
     
-    while(1)
+    while(Daphne >= Cleo)
     {
-        if(Daphne < Cleo)
-            break;
-        
-        Daphne += 0.10 * 100;
+        Daphne += 0.10 * init_money;
         Cleo += 0.05 * Cleo;
         years ++;
     }
@@ -25,3 +22,4 @@ int main()
     
     return 0;
 }
+

@@ -14,25 +14,19 @@ int main()
     
     for(int i=0; i<YEAR; i++)
     {
-        int sum_year = 0;
-        
         for(int j=0; j<MONTH; j++)
         {
-            int num_sale = 0;
-            
             cout << "input the number of sales in " << month[j] << ", NO." << i+1 << " year " << ": ";
-            cin >> num_sale;
+            cin >> num_mon[i][j];
             
-            num_mon[i][j] = num_sale;
-            sum_year += num_sale;
+            num_year[i] += num_mon[i][j];
         }
-        num_year[i] = sum_year;
-        sum += sum_year;
     }
     
     for(int i=0; i<YEAR; i++)
     {
         cout << "the sale number in " << i+1 << " year is " << num_year[i] << endl;
+        sum += num_year[i];
     }
     cout << "total sale number in " << YEAR << " years are " << sum << endl;
     

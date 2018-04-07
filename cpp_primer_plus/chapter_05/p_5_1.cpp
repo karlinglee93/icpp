@@ -14,7 +14,7 @@ int main()
     cout << "the second one is ";
     cin >> input_2;
     
-    for(int i=input_1, j=input_2; i<=j; i++)
+    for(int i = input_1; i <= input_2; i++)
     {
         sum += i;
     }
