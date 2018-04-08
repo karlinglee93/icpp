@@ -1,34 +1,41 @@
+// 看的答案
+
 #include <iostream>
-#include <cctype>
+#include <array>
 
 using namespace std;
+const int MAX = 10;
 
 int main()
 {
-	double number[10];
-	char donation =0.0;
-	int len = 0;
-	double ave = 0.0;
-	int num = 0;
-
-	while(cin.get(donation) && isdigit(donation))
-	{
-		number[len++] = donation;
-	}
-
-	for(int i=0; i<len; i++)
-	{
-		ave += number[i] / len;
-	}
-
-	for(int i=0; i<len; i++)
-	{
-		if(number[i] > ave)
-			num++;
-	}
-
-	cout << "ave is " << ave << endl;
-	cout << "the num > ave is " << num << endl;
-
-	return 0;
+    array<double, MAX> arr;
+    double donation =0.0;
+    int len = 0;
+    double sum = 0.0;
+    double ave = 0.0;
+    int num = 0;
+    
+    cout << "input something (! isdigit means end)" << endl;
+    
+    while(len < 10 && cin >> donation)      // 为什么当cin >> donation 中输入非数字时，布尔值为0?
+        // 答: 要求输入double 型, 结果输入其他型以后, donation = 0；
+    {
+        arr[len] = donation;
+        sum += arr[len++];
+    }
+    
+    ave = sum / len;
+    
+    for(int i=0; i<len; i++)
+    {
+        if(arr[i] > ave)
+            num++;
+    }
+    
+    cout << "ave is " << ave << endl;
+    cout << "the num of (arr > ave) is " << num << endl;
+    
+    return 0;
 }
+
+
