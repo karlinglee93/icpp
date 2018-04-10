@@ -13,10 +13,14 @@ struct person
 
 int main()
 {
+	string filename;
 	int n_person = 0;
 
+	cout << "Enter the file name: " << endl;
+	getline(cin, filename);
+
 	ifstream infile;
-	infile.open("p_6_9_test.txt");
+	infile.open(filename.c_str());
 
 	infile >> n_person;
 

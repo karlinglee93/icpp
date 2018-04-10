@@ -18,13 +18,14 @@ int main()
     cout << "input something (! isdigit means end)" << endl;
     
     while(len < 10 && cin >> donation)      // 为什么当cin >> donation 中输入非数字时，布尔值为0?
-        // 答: 要求输入double 型, 结果输入其他型以后, donation = 0；
+        // 答: 要求输入double 型, 结果输入其他型以后, 条件(cin >> donation) 为false, 故退出循环.
     {
         arr[len] = donation;
         sum += arr[len++];
     }
     
-    ave = sum / len;
+    if(len != 0)
+	ave = sum / len;
     
     for(int i=0; i<len; i++)
     {

@@ -11,13 +11,13 @@ int main()
     int n_vowel = 0;
     int n_consonant = 0;
     int n_other = 0;
-    string str;
+    string str;		// string str 是输入的单词
     
     cout << "Enter words (q to quit): " << endl;
     
     while(getline(cin, str))
     {
-        if(str.length() == 1 && str[0] == 'q')
+        if(str.length() == 1 && str[0] == 'q')		// str.length() 查看字符串长度, str[0] 是str 的首字母, 且为ch 类型
             break;
         if(! isalpha(str[0]))
             n_other++;

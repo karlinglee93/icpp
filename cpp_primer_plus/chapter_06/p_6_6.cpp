@@ -14,16 +14,17 @@ int main()
     
     cout << "input number of person: ";
     cin >> n_person;
-    
+    cin.get();
+
     person *p = new person[n_person];
     
     for(int i=0; i<n_person; i++)
     {
-        cin.get();
         cout << "input name: ";
         getline(cin, p[i].name);
         cout << "input money: ";
         cin >> p[i].money;
+        cin.get();
     }
     
     int len_1 = 0;
