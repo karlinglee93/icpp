@@ -1,4 +1,4 @@
-// 看的答案
+// 看的答案，二维数组的感觉
 
 #include <iostream>
 
@@ -10,7 +10,7 @@ struct Expense
     double expense[];
 };
 
-void fill(struct Expense * exp)     // 不懂什么要用指针，因为exp 里面是一个‘数组’
+void fill(struct Expense * exp)     // 不懂什么要用指针？答：exp 里面是一个‘数组’
 {
     for (int i = 0; i < Seasons; i++)
     {
@@ -19,7 +19,7 @@ void fill(struct Expense * exp)     // 不懂什么要用指针，因为exp 里�
     }
 }
 
-void show(struct Expense * exp)     // 不懂什么要用指针
+void show(struct Expense * exp)     // 不懂什么要用指针？答：exp 里面是一个‘数组’
 {
     double total = 0.0;
     cout << "\nEXPENSES\n";
@@ -34,8 +34,8 @@ void show(struct Expense * exp)     // 不懂什么要用指针
 int main()
 {
     struct Expense * exp = new struct Expense;      //// 不懂什么要用new
-    fill(exp);      //不懂为什么参数是exp，不是&exp
-    show(exp);      //不懂为什么参数是exp，不是&exp
+    fill(exp);      //不懂为什么参数是exp，不是&exp？答：exp 表示exp 里面expenses 数组的第一个元素的地址
+    show(exp);      //不懂为什么参数是exp，不是&exp？答：exp 表示exp 里面expenses 数组的第一个元素的地址
     
     delete exp;
     
